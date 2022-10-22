@@ -16,6 +16,50 @@ body {
 
 .container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: auto;
+  overflow: hidden;
   width: 100%;
+}
+
+.active {
+  flex-grow: 1;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  height: 100%;
+  padding: 6rem 0;
+}
+
+.images-container__image {
+  width: 10%;
+  display: flex;
+  border-radius: 3rem;
+  position: relative;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: flex 0.7s ease-in;;
+}
+
+
+.images-container__image h4 {
+  position: absolute;
+  color: #fff;
+  left: 20px;
+  bottom: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: cursive;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.4s
+}
+
+.images-container__image.active h4 {
+  opacity: 1;
+  transition: all ease-in 1s;
 }
