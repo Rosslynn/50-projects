@@ -16,6 +16,7 @@ body {
 
 .container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: auto;
+  overflow: hidden;
   width: 100%;
 }
