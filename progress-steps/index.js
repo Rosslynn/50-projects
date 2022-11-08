@@ -38,11 +38,10 @@ nextButton.addEventListener('click', () => {
   if (currentActive === stepsLength) return;
   currentActive++;
   if (currentActive > 1) prevButton.removeAttribute('disabled');
-  if (currentActive === stepsLength) nextButton.setAttribute('disabled', 'true');
   const DOMStep = document.querySelector(`.progress-container__step-${currentActive}`);
   DOMStep.classList.add('active');
-
-  progressContainerProgressBar.style.width = `${ ((currentActive - 1) * 100) / (stepsLength - 1)  }%`
+  progressContainerProgressBar.style.width = `${ ((currentActive - 1) * 100) / (stepsLength - 1)  }%`;
+  if (currentActive === stepsLength) nextButton.setAttribute('disabled', 'true');
 });
 
 prevButton.addEventListener('click', () => {
